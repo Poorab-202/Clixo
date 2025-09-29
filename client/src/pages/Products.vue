@@ -2,7 +2,6 @@
   <div class="container">
     <h1>Our Products</h1>
 
-    <!-- Loading state -->
     <p v-if="loading">Loading products...</p>
 
     <div v-else class="grid">

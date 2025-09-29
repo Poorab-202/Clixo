@@ -3,7 +3,7 @@
         <img :src="product.thumbnail" :alt="product.title" class="product-image" />
         <h3>{{ product.title }}</h3>
         <p class="price">{{ Math.round(product.price * 88) }} ₹</p>
-        <router-link :to="`/order/${product.id}`">
+        <router-link :to="`/products/${product.id}`">
             <n-button type="primary" block>Order Now</n-button>
         </router-link>
     </n-card>
@@ -37,6 +37,6 @@ defineProps({
     font-weight: bold;
     margin: 0.5rem 0 1rem;
     color: #3B0270;
-    
+
 }
 </style>
