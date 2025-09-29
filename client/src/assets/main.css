@@ -1,19 +1,33 @@
+:root {
+    --color-dark-purple: #3B0270;
+    --color-bright-purple: #6F00FF;
+    --color-light-purple: #E9B3FB;
+    --color-soft-pink: #FFF1F1;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease-in-out;
+}
 
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background: #fff;
-    color: #3B0270;
-   
+    background: #ffffff;
+    /* White background for all pages */
+    color: var(--color-dark-purple);
 }
+
 
 h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    color: var(--color-dark-purple);
 }
