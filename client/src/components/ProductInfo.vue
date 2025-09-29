@@ -1,16 +1,16 @@
 <template>
   <div class="info-card">
-    <!-- Title -->
+
     <h1 class="title">{{ product.title }}</h1>
 
-    <!-- Description -->
+
     <p class="desc">{{ product.description }}</p>
 
-    <!-- Product Details -->
+
     <ul class="details">
       <li><span>Brand:</span> {{ product.brand }}</li>
       <li><span>Category:</span> {{ product.category }}</li>
-      <li><span>Price:</span> \${{ product.price.toFixed(2) }}</li>
+      <li><span>Price:</span>{{ formatINR((product.price * 88).toFixed(0)) }} ₹</li>
       <li>
         <span>Stock:</span>
         <span :class="['stock', product.stock < 5 ? 'low' : 'in-stock']">
@@ -21,10 +21,10 @@
       <li><span>Return Policy:</span> {{ product.returnPolicy }}</li>
     </ul>
 
-    <!-- CTA -->
+
     <router-link :to="`/order/${product.id}`" class="cta">
       <n-button type="primary" class="buy-btn" block>
-        🛒 Buy Now
+        Buy Now
       </n-button>
     </router-link>
   </div>
@@ -32,6 +32,9 @@
 
 <script setup>
 import { NButton } from "naive-ui"
+import formatINR from '../utils/formatINR.js';
+import { Cart } from "@vicons/ionicons5";
+
 
 defineProps({
   product: { type: Object, required: true }
@@ -55,21 +58,21 @@ defineProps({
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Title */
+
 .title {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--color-dark-purple, #3B0270);
 }
 
-/* Description */
+
 .desc {
   color: #444;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
 
-/* Details List */
+
 .details {
   list-style: none;
   padding: 0;
@@ -90,7 +93,7 @@ defineProps({
   color: var(--color-dark-purple, #3B0270);
 }
 
-/* Stock status */
+
 .stock {
   font-weight: bold;
 }
@@ -103,7 +106,7 @@ defineProps({
   color: var(--color-bright-purple, #6F00FF);
 }
 
-/* CTA */
+
 .cta {
   margin-top: 1rem;
 }

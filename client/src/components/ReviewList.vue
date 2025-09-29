@@ -3,16 +3,13 @@
         <h2 class="reviews-title">Customer Reviews</h2>
 
         <div v-for="(review, i) in reviews" :key="i" class="review-card">
-            <!-- Reviewer + Rating -->
             <div class="review-header">
                 <p class="reviewer">{{ review.reviewerName }}</p>
                 <p class="rating">⭐ {{ review.rating }}/5</p>
             </div>
 
-            <!-- Comment -->
             <p class="comment">“{{ review.comment }}”</p>
 
-            <!-- Date -->
             <small class="date">{{ new Date(review.date).toLocaleDateString() }}</small>
         </div>
     </div>
@@ -38,7 +35,6 @@ defineProps({
     padding-left: 0.8rem;
 }
 
-/* Each review card */
 .review-card {
     background: #ffffff;
     border: 1px solid #d4c9be;
@@ -54,7 +50,6 @@ defineProps({
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
 }
 
-/* Header: name + rating */
 .review-header {
     display: flex;
     justify-content: space-between;
@@ -73,7 +68,6 @@ defineProps({
     color: #6F00FF;
 }
 
-/* Comment */
 .comment {
     font-style: italic;
     color: #444;
@@ -81,7 +75,6 @@ defineProps({
     line-height: 1.4;
 }
 
-/* Date */
 .date {
     font-size: 0.8rem;
     color: #777;

@@ -1,18 +1,16 @@
 <template>
     <div class="container" v-if="product">
         <div class="layout">
-            <!-- Left Column: Images -->
+
             <div class="left">
                 <ImageGallery :images="product.images" :alt="product.title" :thumbnail="product.thumbnail" />
             </div>
 
-            <!-- Right Column: Info -->
             <div class="right">
                 <ProductInfo :product="product" />
             </div>
         </div>
 
-        <!-- Reviews -->
         <ReviewList :reviews="product.reviews" />
     </div>
 
@@ -36,8 +34,6 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-
-
 .container {
     max-width: 1100px;
     margin: 0 auto;

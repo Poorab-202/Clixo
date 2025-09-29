@@ -20,7 +20,7 @@ const props = defineProps({
 const selectedImage = ref(null)
 
 onMounted(() => {
-    selectedImage.value = props.thumbnail || props.images[0] // fallback to first image
+    selectedImage.value = props.thumbnail || props.images[0] 
 })
 </script>
 

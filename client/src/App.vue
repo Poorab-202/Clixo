@@ -16,7 +16,7 @@ const themeOverrides = {
     itemTextColorHover: "#E9B3FB",     // hover
     itemTextColorActive: "#6F00FF",    // active
     itemTextColorSelected: "#6F00FF",  // selected
-    itemColorHover: "transparent",     // remove gray hover background
+    itemColorHover: "transparent",
     itemColorActive: "transparent",
     itemColorActiveHover: "transparent",
   },

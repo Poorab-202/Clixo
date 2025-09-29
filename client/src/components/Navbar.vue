@@ -1,25 +1,24 @@
 <template>
     <header class="bg-[#3B0270] shadow-md">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
-            <!-- Left: Logo -->
+           
             <div class="flex items-center gap-2 cursor-pointer" @click="goHome">
                 <img src="/logo.png" alt="Clixo Logo" class="h-26 w-26 object-contain" />
             </div>
 
-            <!-- Right: Nav + Profile + Hamburger -->
+            
             <div class="flex items-center gap-4">
-                <!-- Desktop Nav -->
+                
                 <n-menu class="site-menu hidden md:flex" mode="horizontal" :value="activeKey" :options="menuOptions"
                     @update:value="handleMenuClick" />
 
-                <!-- Profile Icon (desktop) -->
+               
                 <n-button quaternary circle class="hidden md:flex text-[#E9B3FB]">
                     <n-icon size="22">
                         <UserOutlined />
                     </n-icon>
                 </n-button>
 
-                <!-- Hamburger (mobile only) -->
                 <n-button quaternary circle class="md:hidden text-[#E9B3FB]" @click="isOpen = true">
                     <n-icon size="22">
                         <MenuOutlined />
@@ -28,7 +27,6 @@
             </div>
         </div>
 
-        <!-- Mobile Drawer -->
         <n-drawer v-model:show="isOpen" placement="right" width="240">
             <n-drawer-content title="Menu">
                 <n-menu class="site-menu" mode="vertical" :value="activeKey" :options="menuOptions"

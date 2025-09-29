@@ -5,11 +5,7 @@
     <p v-if="loading">Loading products...</p>
 
     <div v-else class="grid">
-      <ProductCard 
-        v-for="item in products" 
-        :key="item.id" 
-        :product="item" 
-      />
+      <ProductCard v-for="item in products" :key="item.id" :product="item" />
     </div>
   </div>
 </template>
