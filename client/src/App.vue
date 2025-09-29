@@ -1,5 +1,5 @@
 <script setup>
-import { NConfigProvider } from "naive-ui"
+import { NConfigProvider, NMessageProvider } from "naive-ui"
 import Navbar from "./components/Navbar.vue"
 import Footer from './components/Footer.vue';
 
@@ -33,8 +33,10 @@ const themeOverrides = {
 
 <template>
   <n-config-provider :theme-overrides="themeOverrides">
-    <Navbar />
-    <router-view />
-    <Footer></Footer>
+    <n-message-provider>
+      <Navbar />
+      <router-view />
+      <Footer></Footer>
+    </n-message-provider>
   </n-config-provider>
 </template>
