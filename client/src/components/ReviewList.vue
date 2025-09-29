@@ -32,7 +32,7 @@ defineProps({
 .reviews-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #123458;
+    color: #3B0270;
     margin-bottom: 1.5rem;
     border-left: 5px solid #d4c9be;
     padding-left: 0.8rem;
@@ -70,7 +70,7 @@ defineProps({
 .rating {
     font-size: 0.95rem;
     font-weight: 600;
-    color: #123458;
+    color: #6F00FF;
 }
 
 /* Comment */

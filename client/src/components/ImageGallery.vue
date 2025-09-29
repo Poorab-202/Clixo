@@ -57,6 +57,6 @@ onMounted(() => {
 }
 
 .thumbnails img.active {
-    border: 2px solid #123458;
+    border: 2px solid #3B0270;
 }
 </style>
