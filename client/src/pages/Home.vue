@@ -4,15 +4,20 @@
         <section class="hero">
             <div class="hero-overlay">
                 <div class="hero-content">
-                    <h1>Welcome to <span class="brand">Clixo</span></h1>
+                    <h1>
+                        Welcome to <span class="brand">Clixo</span>
+                    </h1>
                     <p class="subtitle">Discover premium products at unbeatable prices ✨</p>
                     <router-link to="/products">
                         <n-button type="primary" size="large" class="shop-btn">Shop Now</n-button>
                     </router-link>
                 </div>
             </div>
-            <img src="/hero-banner.jpg" alt="Shopping banner" class="hero-image" />
         </section>
+
+
+
+
 
 
         <section class="featured">
@@ -70,47 +75,49 @@ onMounted(async () => {
 
 .hero {
     position: relative;
-    width: 100%;
-    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 80vh;
+    padding: 3rem 2rem;
+    background-image: url("/hero-banner.jpg");
+    background-size: cover;
+    background-position: right center;
+    /* focus on right side (girl) */
+    background-repeat: no-repeat;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
     color: #fff;
 }
 
-.hero-overlay h1 {
-    font-size: 2.8rem;
+/* Dark gradient overlay to improve text readability */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2rem;
+}
+
+.hero-content {
+    max-width: 600px;
+    color: #fff1f1;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
-.hero-overlay .brand {
-    color: #E9B3FB;
+.hero .brand {
+    color: #e9b3fb;
 }
 
-.subtitle {
-    font-size: 1.2rem;
+.hero .subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     margin-bottom: 1.5rem;
 }
 
@@ -118,13 +125,46 @@ onMounted(async () => {
     font-size: 1.1rem;
     padding: 0.8rem 2rem;
     border-radius: 10px;
-    background: #6F00FF;
+    background: #6f00ff;
 }
 
 .shop-btn:hover {
-    background: #3B0270;
+    background: #3b0270;
 }
 
+/* 📱 Mobile */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
+        padding: 2rem 1rem;
+        background-position: right top;
+        /* always show the girl on the right */
+    }
+
+    .hero-overlay {
+        background: linear-gradient(to right,
+                rgba(59, 2, 112, 0.2) 40%,
+                /* dark purple on left */
+                rgba(0, 0, 0, 0.05) 100%
+                /* transparent on right */
+            );
+        justify-content: center;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 90%;
+    }
+
+    .hero-content h1 {
+        color: #F9F9F9;
+    }
+
+    .shop-btn {
+        width: 100%;
+    }
+}
 
 .featured {
     max-width: 1200px;
