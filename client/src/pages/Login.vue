@@ -1,7 +1,7 @@
 <template>
     <div class="login-page">
         <n-card class="login-card" :bordered="false">
-           
+
             <div class="header">
                 <h1>Welcome Back 👋</h1>
                 <p class="subtitle">
@@ -10,18 +10,17 @@
             </div>
 
             <n-form @submit.prevent="handleLogin" :model="form" :rules="rules" ref="formRef" class="form">
-               
+
                 <n-form-item path="username">
                     <n-input v-model:value="form.username" size="large" round placeholder="Username" />
                 </n-form-item>
 
-           \
                 <n-form-item path="password">
                     <n-input v-model:value="form.password" size="large" round type="password"
                         show-password-on="mousedown" placeholder="Password" />
                 </n-form-item>
 
-               
+
                 <n-button type="primary" size="large" block round attr-type="submit" class="login-btn"
                     :loading="loading">
                     🔑 Login
@@ -61,9 +60,9 @@ const rules = {
 async function handleLogin() {
     loading.value = true
     try {
-     
+
         if (form.username && form.password) {
-           
+
             localStorage.setItem("accessToken", "fake-access-token")
             localStorage.setItem("userName", form.username)
             window.dispatchEvent(new Event("storage"))
@@ -131,5 +130,33 @@ async function handleLogin() {
 
 .login-btn:hover {
     background: #3b0270;
+}
+
+.header h1 {
+    font-size: 1.6rem;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.05rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header h1 {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
 }
 </style>

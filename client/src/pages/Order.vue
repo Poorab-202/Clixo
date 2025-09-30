@@ -71,7 +71,7 @@ function submitOrder() {
 
    
     message.success(
-        `✅ Order placed for ${quantity.value} ${product.value.title}(s).`
+        `Order placed for ${quantity.value} ${product.value.title}(s).`
     )
 
  

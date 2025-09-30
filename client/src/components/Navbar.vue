@@ -3,8 +3,8 @@
         <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
 
             <div class="flex items-center gap-3 cursor-pointer" @click="goHome">
-                <img src="/logo.png" alt="Clixo Logo" class="h-10 w-10 object-contain" />
-                <span class="hidden sm:inline-block font-bold text-[#E9B3FB]">Clixo</span>
+                <img src="/logo.png" alt="Clixo Logo" class="h-26 w-26 object-contain" />
+                
             </div>
 
 
