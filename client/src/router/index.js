@@ -6,8 +6,10 @@ import ProductDetails from "../pages/ProductDetails.vue"
 import Order from "../pages/Order.vue"
 import Contact from "../pages/Contact.vue"
 import About from "../pages/About.vue"
+import Login from "../pages/Login.vue"
 
 const routes = [
+  { path: "/login", component: Login },
   { path: "/", component: Home },
   { path: "/products", component: Products },
   { path: "/products/:id", component: ProductDetails, props: true },

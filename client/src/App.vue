@@ -5,30 +5,52 @@ import Footer from './components/Footer.vue';
 
 const themeOverrides = {
   common: {
-    primaryColor: "#6F00FF",        // Bright Purple
-    primaryColorHover: "#E9B3FB",   // Light Purple
-    primaryColorPressed: "#3B0270", // Dark Purple
-    primaryColorSuppl: "#FFF1F1",   // Soft Pink
-    textColorBase: "#FFF1F1",       // Base text color = Soft Pink
+    primaryColor: "#6F00FF",
+    primaryColorHover: "#E9B3FB",
+    primaryColorPressed: "#3B0270",
+    primaryColorSuppl: "#FFF1F1",
+    textColorBase: "#FFF1F1",
   },
   Menu: {
-    itemTextColor: "#FFF1F1",          // default
-    itemTextColorHover: "#E9B3FB",     // hover
-    itemTextColorActive: "#6F00FF",    // active
-    itemTextColorSelected: "#6F00FF",  // selected
-    itemColorHover: "transparent",
+
+    itemTextColor: "#FFF1F1",
+    itemTextColorHover: "#E9B3FB",
+    itemTextColorActive: "#6F00FF",
+    itemTextColorSelected: "#6F00FF",
+    itemTextColorChildActive: "#6F00FF",
+    itemTextColorChildSelected: "#6F00FF",
+
+
+    itemColor: "transparent",
+    itemColorHover: "#3B0270",
     itemColorActive: "transparent",
-    itemColorActiveHover: "transparent",
+    itemColorActiveHover: "#3B0270",
+    itemColorSelected: "transparent",
+    itemColorChildActive: "transparent",
+    itemColorChildHover: "#3B0270",
+    itemColorChildSelected: "transparent",
+
+
+    borderColorHorizontal: "#E9B3FB",
+  },
+  Drawer: {
+    color: "#3B0270",
+    textColor: "#FFF1F1",
+    titleTextColor: "#E9B3FB",
+    headerColor: "#3B0270",
+    footerColor: "#3B0270",
   },
   Button: {
     textColor: "#FFF1F1",
-    colorPrimary: "#6F00FF",          // Order Now button bg
-    colorHoverPrimary: "#3B0270",     // hover = dark purple
-    colorPressedPrimary: "#E9B3FB",   // pressed = light purple
+    colorPrimary: "#6F00FF",
+    colorHoverPrimary: "#3B0270",
+    colorPressedPrimary: "#E9B3FB",
     borderRadius: "8px",
     fontWeight: "600"
   }
 }
+
+
 </script>
 
 <template>

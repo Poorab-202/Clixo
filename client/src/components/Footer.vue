@@ -40,7 +40,6 @@
 
     color: #FFF1F1;
     padding: 3rem 2rem 1rem;
-    margin-top: 4rem;
 }
 
 .footer-container {
